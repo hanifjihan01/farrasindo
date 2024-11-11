@@ -1,0 +1,115 @@
+.monster-status-container {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  width: 700px;
+}
+
+.monster-img {
+  border-radius: 8px;
+  width: 80%;
+}
+
+.attributes {
+  margin-top: 10px;
+}
+
+.attributes div {
+  margin-bottom: 10px;
+}
+
+.roles-section .roles div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  gap: 5px; /* Reduce space between label and value */
+  text-align: center;
+  margin-left: 160px;
+}
+
+.stats-section {
+  font-size: 0.9rem;
+}
+
+.stats-section div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  gap: 5px; /* Reduce space between label and value */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .roles-section, .stats-section {
+    margin-top: 20px;
+  }
+}
+
+.attributebaru {
+  color: rgb(235, 235, 235);
+  font-weight: bold;
+  font-family: monospace;
+}
+
+/* Add keyframes for the animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes growBar {
+  0% { width: 0; }
+  100% { width: 80%; }
+}
+
+/* Apply the animations when active */
+.monster-status-container {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.monster-status-container.active {
+  opacity: 1;
+}
+
+.attributes div,
+.roles div strong,
+.stats-section div {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Delay for the animations to happen sequentially */
+.attributes div {
+  animation-delay: 0.3s;
+}
+
+.roles div {
+  animation-delay: 0.5s;
+}
+
+.stats-section div {
+  animation-delay: 0.8s;
+}
+
+
+.width{
+  margin-left: 91px;
+}
+
+.height {
+  margin-left: 86px;
+}
+
+.length {
+   margin-left: 84px;
+}
+
+.weight{
+   margin-left: 85px;
+}
+
+.jacking{
+  margin-left: 80px;
+}
